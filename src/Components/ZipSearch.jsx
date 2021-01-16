@@ -17,7 +17,7 @@ class ZipSearch extends Component {
   handleSubmit = (event) => {
     event.preventDefault()
     
-    fetch(`http://ctp-zip-api.herokuapp.com/zip/${this.state.zipCode}`)
+    fetch(`https://ctp-zip-api.herokuapp.com/zip/${this.state.zipCode}`)
       .then(response => response.json())
       .then(locations => {
         this.setState({searchResults: locations})
